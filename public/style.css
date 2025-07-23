@@ -1,0 +1,213 @@
+/* #adi{
+    background-color:aqua;
+} */
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 20px;
+    margin: 0;
+}
+
+.main-heading {
+    text-align: center;
+    color: #333;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 70%;
+}
+
+.post h3 {
+    margin: 5px 0;
+    color: #444;
+}
+
+.post p {
+    color: #555;
+    font-size: 16px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-right: 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn.delete {
+    background-color: #e74c3c;
+}
+
+.btn.delete:hover {
+    background-color: #c0392b;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.new-post-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn.new {
+    background-color: #2ecc71;
+}
+
+.btn.new:hover {
+    background-color: #27ae60;
+} */
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    padding: 30px;
+    color: #333;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Container for content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Post card style */
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    margin-bottom: 10px;
+    color: #2980b9;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: -24px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #27ae60;
+}
+
+/* Navigation links */
+.nav {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav a {
+    margin: 0 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+.viewedit a{
+     text-decoration: none;
+}
+.viewedit a:hover {
+   text-decoration: underline;
+}
