@@ -1,79 +1,71 @@
-# 📝 Blog Post CRUD Application
+A simple blog application where users can sign up, log in, and create, read, update, and delete (CRUD) their blog posts. Built with Node.js, Express.js, MySQL, and EJS.
 
-A simple blog post platform where users can create, view, edit, and delete posts. Built with **Node.js**, **Express.js**, **MySQL**, **EJS**, and **CSS**. The application follows RESTful architecture and uses server-side rendering.
+✨ Features
 
+User Signup with password hashing using bcrypt
+User Login/Logout with session management
+Flash messages for success and error alerts using connect-flash
+Create, view, edit, and delete blog posts (only by logged-in users)
+Authorization: Users can only edit/delete their own posts
+UI templating with EJS and layout engine ejs-mate
+Basic styling with Bootstrap
 
+🛠️ Technologies Used
 
-## 🚀 Features
+Backend: Node.js, Express.js
+Database: MySQL (via mysql2 package)
+Templating: EJS, ejs-mate
+Authentication: express-session, bcrypt, connect-flash
+Styling: Bootstrap 5
 
-- Create a new blog post with a username and content
-- View all blog posts (newest first)
-- View post details on a separate page
-- Edit an existing post
-- Delete a post
-- Responsive and clean UI using custom CSS
-- Server-side sorting using `created_at` timestamps
+📂 Project Structure
 
+blog-post-app/
+|
+├── public/             # Static files (CSS, images)
+├── views/              # EJS templates (login.ejs, signup.ejs, index.ejs, etc.)
+|
+├── index.js            # Main server file
+├── package.json
+└── README.md
 
+⚙️ Setup Instructions
 
-## 🛠️ Tech Stack
+1. Clone the repository
 
-- **Backend**: Node.js, Express.js
-- **Frontend**: EJS (Embedded JavaScript Templates), HTML, CSS
-- **Database**: MySQL
-- **Templating**: EJS
-- **Routing**: RESTful routes with method-override for PUT and DELETE
+git clone https://github.com/your-username/blog-post-app.git
+cd blog-post-app
 
-
-
-## 📁 Project Structure
-
-project/
-│
-├── views/ # EJS templates (home, new, edit, view)
-├── public/ # Static CSS files
-├── app.js # Main Express app
-├── db.js # MySQL DB connection
-├── package.json # Dependencies
-└── README.md # Project overview
-
-
-## 📦 Installation
-
-1. **Clone the repository**
-   git clone https://github.com/your-username/blog-post-crud-app.git
-   cd blog-post-crud-app
-
-
-Install dependencies:
+2. Install dependencies
 
 npm install
 
-Setup MySQL Database
+3. Set up MySQL database
 
-Create a database and table with the following schema:
+CREATE DATABASE postDB;
 
-CREATE TABLE posts (
-    id VARCHAR(255) PRIMARY KEY,
-    username VARCHAR(255),
-    content TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+USE postDB;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL
 );
 
-Configure DB in db.js:
+CREATE TABLE posts (
+  id VARCHAR(255) PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL
+);
 
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "your_username",
-    password: "your_password",
-    database: "your_database"
-});
+4. Start the app
 
-Run the app:
+node index.js
+# or use nodemon
+nodemon index.js
 
-node app.js
+Visit http://localhost:3000 in your browser.
 
-Navigate to http://localhost:3000/posts
+🧪 Test User (optional)
 
-🔒 Security
-Input is escaped to prevent SQL Injection (using prepared statements).
+You can sign up directly on the app, or insert a test user manually:
