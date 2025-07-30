@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h2>@ <%=obj.username%></h2>
+  <% layout('layout') %>
+    <!-- <h2>@ <%=obj.username%></h2> -->
     <form method="post" action="/posts/<%=obj.id%>?_method=PATCH">
       <textarea name="content"><%=obj.content%></textarea>
       <br>

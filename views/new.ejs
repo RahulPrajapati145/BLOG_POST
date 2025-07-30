@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <% layout('layout') %>
+    <h2><%=user%></h2>
     <form method="post" , action="/posts">
-        <input placeholder="username" name="username">
-        <br><br>
         <textarea placeholder="write your post" name="content"></textarea>
         <br>
         <button class="btn">Submit post</button>

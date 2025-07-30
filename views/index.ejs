@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>BLOG POST</h1>
+    <% layout('layout') %>
     <%for(let post of posts){ %>
     <div class="post" id="adi">
     <h3>@ <%=post.username%></h3>
