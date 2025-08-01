@@ -11,8 +11,8 @@ app.engine("ejs",engine);
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Aditi@123",        // Use your MySQL password
-    database: "postDB"
+    password:"Pekka$#1234",        // Use your MySQL password
+    database:"postDB"
 });
 
 db.connect((err) => {
